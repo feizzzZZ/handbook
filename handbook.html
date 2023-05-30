@@ -1,0 +1,435 @@
+<!-- Modern HTML uses this doctype = <!DOCTYPE html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>handbook-html</title>
+</head>
+<body>
+    <!-- part of the page introduction = <header></header> -->
+    <header>
+        <!-- add comment = not show on page: type command + / -->
+
+        <!-- heading = <h.></h.> ~ h1 - h6 -->
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+    </header>
+    <!-- main page = <main></main> -->
+    <main>
+        <!-- paragraph = <p></p> -->
+        <p>Some text</p>
+
+        <!-- span = <span></span> -->
+        <p>A part of the text <span>and here another part</span></p>
+
+        <!-- line break = <br> -->
+        <p>Some text<br>A new line</p>
+
+        <!-- horizon line = <hr> -->
+        <p>Some text<hr>A new line</p>
+
+        <!-- unordered lists = <ul></ul> -->
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+        </ul>
+
+        <!-- Ordered lists = <ol></ol> -->
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+        </ol>
+
+        <!-- Definition lists = <dl></dl> -->
+        <dl>
+            <dt>animal</dt>
+            <dd>cat</dd>
+            <dt>animal</dt>
+            <dd>dog</dd>
+            <dt>animal</dt>
+            <dd>bird</dd>
+        </dl>
+
+        <!-- mark = <mark></mark> -->
+        <mark>mark</mark>
+
+        <!-- underline text = <ins></ins> -->
+        <ins>ins</ins>
+
+        <!-- line in text = <del></del> -->
+        <del>del</del>
+
+        <!-- upper text = <sup></sup> -->
+        <sup>sup</sup>
+
+        <!-- lower text = <sub></sub> -->
+        <sub>sub</sub>
+
+        <!-- small text = <small></small> -->
+        <small>small</small>
+
+        <!-- italic text = <i></i> -->
+        <i>i</i>
+
+        <!-- bold text = <b></b> -->
+        <b>b</b>
+
+        <!-- strong text like a bold but more meaning than b -->
+        <strong>strong</strong>
+
+        <!-- em text like an i but more meaning than i -->
+        <em>em</em>
+
+        <!-- insert citations in the text = <blockquote></blockquote> -->
+        <blockquote>blockquote</blockquote>
+
+        <!-- inline quotes = <q></q> -->
+        <q>inline quotes</q>
+
+        <!-- link = <a href="https://---.com"></a> -->
+        <a href="https://google.com">click here</a>
+
+        <!-- link in image = <a href="https://flaviocopes.com"><img src="your image"></a> -->
+        <a href="https://google.com">
+           <img src="demo.jpg"> 
+        </a>
+        <!-- open the link in new tab, use target = <a href="..." target="_blank"></a> -->
+        <a href="https://google.com" target="_blank">open in new tab</a>
+
+        <!-- article = <article></article> -->
+        <div>
+            <article>
+              <h2>A blog post</h2>
+              <a ..>Read more</a>
+            </article>
+            <article>
+              <h2>Another blog post</h2>
+              <a ..>Read more</a>
+            </article>
+        </div>
+
+          <!-- section = <section></section> -->
+        <section>
+            <h2>A section of the page</h2>
+            <p>...</p>
+            <img ... />
+        </section>
+
+          <!-- generic container element = <div></div> can add class or id -->
+        <div>...</div>
+
+        <!-- page navigation = <nav></nav> you can click the link -->
+        <nav> 
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ol>
+        </nav>
+
+        <!-- form = <form action=".."></form> in the action you can specify the URL, in this case i use / meaning = homepage -->
+        <!-- method -> post = send the data to URL -->
+        <form action="/" method="post"></form>
+
+        <!-- method -> get = get the data from URL -->
+        <form action="/" method="get"></form>
+
+        <form action="/">
+        <!-- input -> to provide data for user = <input type="..."> -->
+
+        <!-- type = text  -->
+        <input type="text" placeholder="username" required>
+
+        <!-- type = email -->
+        <input type="email" placeholder="email">
+
+        <!-- type = password -->
+        <input type="password" placeholder="password">
+
+        <!-- type = number -->
+        <input type="number" placeholder="number" min="1" max="1000" step="2">
+
+        <!-- set input pattern -->
+        <input type="text" name="username" pattern="[a-zA-Z]{8}">
+
+        <br>
+        <!-- File uploads -->
+        <input type="file" name="documents">
+
+        <br>
+        <!-- attach multiple files -->
+        <input type="file" name="documents" multiple>
+
+        <br>
+        <!-- specify type of file, incase i use image -->
+        <input type="file" name="secret-documents" accept="image/*">
+
+        <!-- Radio buttons -->
+        <input type="radio" name="color" value="one">
+        <input type="radio" name="color" value="two">
+        <input type="radio" name="color" value="three">
+
+        <!-- Checkboxes -->
+        <input type="checkbox" name="color" value="one">
+        <input type="checkbox" name="color" value="two">
+        <input type="checkbox" name="color" value="three"> 
+
+        <br>
+        <!-- type = time -->
+        <input type="time">
+
+        <!-- type = date -->
+        <input type="date">
+
+        <!-- type = month -->
+        <input type="month">
+
+        <!-- type = week -->
+        <input type="week">
+
+        <!-- type = color -->
+        <input type="color">
+
+        <!-- type = range -->
+        <input type="range" name="whateveryouwant" min="0" max="100" value="50">
+
+        <!-- type = telephone -->
+        <input type="tel" name="telephone-number" placeholder="telephone-number">
+
+        <!-- type = URL -->
+        <input type="url" name="website" placeholder="website">
+
+        <!-- textarea -->
+        <textarea rows="20" cols="10">Example</textarea>
+
+        <br>
+        <!-- select -->
+        <select name="color">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+        </select>
+
+        <!-- you can set option disbaled -->
+        <select name="color">
+            <option value="red" disabled>Red</option>
+            <option value="yellow">Yellow</option>
+        </select>
+
+        <!-- you can set one empty -->
+        <select name="color">
+            <option value="">None</option>
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+        </select>
+
+        <!-- you can create group option -->
+        <select name="color">
+            <optgroup label="Primary">
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="blue">Blue</option>
+            </optgroup>
+            <optgroup label="Others">
+              <option value="green">Green</option>
+              <option value="pink">Pink</option>
+            </optgroup>
+        </select>
+
+        <br>
+        <!-- botton = not like a submit, incase use to click go to another page  -->
+        <input type="button" value="Botton-Click me">
+
+        <br>
+
+        <!-- Form submit = <input type="submit"> -->
+        <input type="submit">
+
+        <!-- set the value replace submit -->
+        <input type="submit" value="Click me">
+    </form>
+
+        <br>
+        <!-- table -->
+        <table></table>
+
+        <!-- Rows -->
+        <table>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+        
+        <!-- Column headers -->
+        <table> 
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+
+        <!-- The table content -->
+        <table> 
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr> 
+            <tr>
+                <td>Row 1 Column 1</td>
+                <td>Row 1 Column 2</td>
+                <td>Row 1 Column 3</td>
+             </tr> 
+             <tr>
+                <td>Row 2 Column 1</td>
+                <td>Row 2 Column 2</td>
+                <td>Row 2 Column 3</td>
+            </tr>
+        </table>
+
+        <!-- Span columns and rows -->
+        <table> 
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr> 
+            <tr>
+                <td colspan="2">Row 1 Columns 1-2</td>
+                <td>Row 1 Column 3</td>
+            </tr>
+            <tr>
+                <td colspan="3">Row 2 Columns 1-3</td>
+            </tr>
+        </table>
+        <table> 
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">Rows 1-2 Columns 1-2</td>
+                <td>Row 1 Column 3</td>
+            </tr>
+            <tr>
+                <td>Row 2 Column 3</td>
+            </tr>
+        </table>
+
+        <!-- More tags to organize the table -->
+        <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Row 1</th>
+                <td>Col 2</td>
+                <td>Col 3</td>
+          </tr> <tr>
+                <th>Row 2</th>
+                <td>Col 2</td>
+                <td>Col 3</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td></td>
+                <td>Footer of Col 1</td>
+                <td>Footer of Col 2</td>
+              </tr>
+            </tfoot>
+          </table>
+
+        <!-- Table caption -->
+        <table>
+            <caption>
+          Dogs age
+            </caption>
+            <tr>
+              <th>Dog</th>
+              <th>Age</th>
+            </tr>
+            <tr>
+              <td>Roger</td>
+              <td>7</td>
+            </tr>
+          </table>
+
+        <br>
+        <!-- The audio tag -->
+        <audio src="file.mp3"></audio>
+
+        <br>
+         <!-- specify the MIME type of the audio -->
+         <audio src="file.mp3" controls type="audio/mpeg"></audio>
+
+        <br>
+        <!-- play automatically  , Note: mobile browsers don't allow autoplay-->
+        <audio src="file.mp3" controls autoplay></audio>
+        
+        <br>
+        <!-- play loops -->
+        <audio src="file.mp3" controls autoplay loop></audio>
+
+        <br>
+        <!-- The video tag -->
+        <video src="file.mp4" controls type="video/mp4"></video>
+
+        <br>
+        <!-- play automatically -->
+        <video src="file.mp4" controls autoplay></video>
+
+        <br>
+        <!-- play loops -->
+        <video src="file.mp4" controls autoplay loop></video>
+
+        <br>
+        <!-- set an image to be the poster image -->
+        <video src="file.mp4" class="cat" poster="cat.jpg"></video>
+
+        <!-- iframe = set width and height parameter -->
+        <iframe src="page.html" width="800" height="400"></iframe>
+
+        <!-- Srcdoc = specify some inline HTML to show -->
+        <iframe srcdoc="<p>My dog is a good dog</p>"></iframe>
+
+        <br>
+        <!-- image -->
+        <img src="cat.jpg" class="cat">
+
+        <!-- for used by screen readers and also by search engine -->
+        <img src="cat.jpg" class="cat" alt="A picture of a cat">
+
+        <!-- set width and height -->
+        <img src="cat.jpg" alt="A picture of a cat" width="300" height="200">
+
+        <br>
+        <!-- The figure tag, often used along with the img tag --> 
+        <figure>
+            <img src="cat.jpg" alt="A nice cat" width="300" height="200">
+            <figcaption>A nice cat</figcaption>
+          </figure>
+
+        <br>
+    </main>
+
+    <!-- footer of the page = <footer></footer> -->
+    <footer>
+
+    </footer>
+</body>
+</html>
