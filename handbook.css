@@ -1,0 +1,327 @@
+/* how css look like */
+p {
+    font-size: 20px;
+}
+
+/* Multiple rules are stacked one after the other */
+
+p {
+    font-size: 20px;
+}
+a {
+    color: blue;
+}
+
+/* how to adding CSS to a HTML */
+/* using the link tag via below */
+<link rel="stylesheet" type="text/css" href="yourcssfile.css">
+
+/* comment */
+/* this is a comment */
+
+/* or you can using the style tag in HTML */
+<style>
+    adapt your CSS
+</style>
+
+/* Basic selectors */
+/* Classes are identified using the . symbol, while ids using the # symbol. */
+
+/* Example using a class: */
+/* in HTML */
+<p class="one">One</p>
+
+/* in CSS */
+.one {
+  color: yellow;
+}
+
+/* Example using an id: */
+/* in HTML */
+<p id="one">One</p>
+
+/* in CSS */
+#one {
+  color: yellow;
+}
+
+/* Combining selectors */
+/* Targeting an element with a class or id */
+
+/* Example using a class: */
+<p class="one">One</p>
+
+/* in CSS */
+p.one {
+  color: yellow;
+}
+
+/* Example using an id: */
+/* in HTML */
+<p id="one">One</p>
+
+/* in CSS */
+p#one {
+  color: yellow;
+}
+
+/* Targeting multiple classes */
+
+/* Example: */
+/* in HTML */
+<p class="one two">One</p>
+
+/* in CSS */
+.one.two {
+  color: yellow;
+}
+
+/* Combining classes and ids */
+
+/* Example: */
+/* in HTML */
+<p class="one" id="two">One</p>
+
+/* in CSS */
+.one \#two {
+  color: yellow;
+}
+
+/* Grouping selectors */
+
+/* Example: */
+/* in HTML */
+<p>My cat name is:</p>
+<span class="cat-name"> One </span>
+
+/* in CSS */
+p,
+.cat-name {
+  color: blue;
+}
+
+/* Follow the document tree with selectors */
+
+/* Example: */
+/* in HTML */
+<span> Hello! </span>
+<p>
+  My cat name is:
+  <span class="cat-name"> One </span>
+</p>
+
+/* in CSS - 1 */
+p span {
+    color: yellow;
+}
+
+/* in CSS - 2 */
+p > span {
+    color: yellow;
+}
+
+/* Importance */
+p {
+    font-size: 20px !important;
+}
+
+/* Import */
+/* Here is how you use it: */
+@import url(myfile.css);
+
+/* url() */
+/* background image with url */
+/* Example: */
+div {
+    background-image: url(test.png);
+}
+/* use link */
+div {
+    background-image: url(https://mysite.com/test.png);
+  }
+
+/* background color */
+p {
+    background-color: yellow;
+}
+div {
+      background-color: #333;
+}
+
+/* background position */
+div {
+    background-position: top right;
+}
+
+/* background-attachment = fix background when scrolling the page background not move */
+div {
+    background-attachment: fixed;
+}
+
+/* background-size */
+div {
+    background-size: 100%;
+}
+/* or */
+div {
+    background-size: 800px 600px;
+}
+
+/* set a gradient as background */
+div {
+    background: linear-gradient(#fff, #333);
+}
+
+/* The basics of using variables */
+/* A CSS Variable is defined with a special syntax, prepending two dashes to a */
+/* name ( --variable-name ), then a colon and a value. Like this: */
+/* Example */
+:root {
+    --primary-color: yellow;
+}
+/* or can access the variable value using var() */
+p {
+    color: var(--primary-color);
+}
+
+/* font family */
+
+/* Example */
+body {
+    font-family: Helvetica;
+}
+
+/* can add multiple */
+/* Example */
+body {
+    font-family: Helvetica, Arial;
+}
+
+/* font-weight */
+-normal
+-bold
+-bolder (relative to the parent element) 
+-lighter (relative to the parent element)
+- 100, 200,300, 400 = normal, 500, 600, 700 = bold, 800, 900
+
+/* font-style */
+/* Example */
+p {
+    font-style: italic;
+}
+
+/* font-size */
+/* Example */
+p{
+    font-size: 20px;
+}
+li {
+      font-size: medium;
+}
+
+/* font */
+/* font order  */
+
+font: <font-stretch> <font-style> <font-variant> <font-weight> <font-size <line-height> <font-family>;
+
+/* Example: */
+body {
+    font: italic bold 20px Helvetica;
+}
+section {
+    font: small-caps bold 20px Helvetica;
+}
+
+/* Typography */
+text-transform
+/* capitalize to uppercase the first letter of each word 
+uppercase to uppercase all the text
+lowercase to lowercase all the text
+none to disable transforming the text, used to avoid inheriting the property */
+
+/* Example: */
+
+p {
+    text-transform: uppercase;
+}
+
+text-decoration
+/* underline
+overline
+line-through
+blink
+none */
+
+/* Example: */
+p {
+    text-decoration: underline;
+}
+
+/* can also set the style of the decoration, and the color */
+p {
+    text-decoration: underline dashed yellow;
+}
+
+/* Valid style values are solid , double , dotted , dashed , wavy . */
+p {
+    text-decoration-line: underline; 
+    text-decoration-color: yellow; 
+    text-decoration-style: dashed;
+}
+
+text-align
+/* start , end , left , right , center , justify */
+
+/* Example: */
+p {
+    text-align: right;
+}
+
+
+vertical-align
+/* -baseline (the default), aligns the baseline to the baseline of the parent element
+-sub makes an element subscripted, simulating the sub HTML element result
+-super makes an element superscripted, simulating the sup HTML element result
+-top align the top of the element to the top of the line
+-text-top align the top of the element to the top of the parent element font
+-middle align the middle of the element to the middle of the line of the parent
+-bottom align the bottom of the element to the bottom of the line
+-text-bottom align the bottom of the element to the bottom of the parent element font */
+
+/* line-height */
+/* Example: */
+p {
+    line-height: 0.9rem;
+}
+
+text-indent
+/* Example: */
+p {
+    text-indent: -10px;
+}
+
+text-align-last
+/* Example: */
+p {
+    text-align-last: right;
+}
+
+word-spacing
+/* Example: */
+p {
+    word-spacing: 2px;
+}
+span {
+    word-spacing: -0.2em;
+}
+letter-spacing
+text-shadow
+white-space
+tab-size
+writing-mode
+hyphens
+text-orientation
+direction
+line-break
+word-break
+overflow-wrap
