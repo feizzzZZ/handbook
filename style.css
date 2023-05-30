@@ -1,0 +1,16 @@
+th, td {
+  padding: 10px;
+  border: 1px solid #333;
+}
+.cat {
+  height: 50px;
+  width: 50px;
+}
+
+p::first-letter {
+  font-weight: bold;
+}
+
+p {
+  background-color: rgba(0, 0, 0, 0.5);
+}
