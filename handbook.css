@@ -315,9 +315,33 @@ span {
     word-spacing: -0.2em;
 }
 letter-spacing
+/* Example: */
+p{
+    letter-spacing: 0.2px;
+}
+span {
+    letter-spacing: -0.2em;
+}
+
 text-shadow
+/* the X offset of the shadow from the text 
+the Y offset of the shadow from the text 
+the blur radius */
+
 white-space
+/* normal
+nowrap
+pre-line */
+
 tab-size
+/* Example: */
+p{
+    tab-size: 2;
+}
+span {
+    tab-size: 4px;
+}
+
 writing-mode
 hyphens
 text-orientation
