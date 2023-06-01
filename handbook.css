@@ -343,9 +343,292 @@ span {
 }
 
 writing-mode
+/* horizontal-tb
+vertical-rl
+vertical-lr */
+
 hyphens
+/* none
+manual
+auto */
+
 text-orientation
+/* mixed
+upright
+sideways */
+
 direction
-line-break
+ltr = left to :right
+rtl = right to :left
+/* Example: */
+p{
+    direction: rtl;
+}
+
 word-break
+/* normal
+break-all
+keep-all */
+
 overflow-wrap
+/* Example: */
+p {
+    overflow-wrap: break-word;
+}
+/* or */
+p {
+    overflow-wrap: anywhere;
+}
+
+Box Model
+
+Border
+-border-style
+-border-color
+-border-width
+
+The border style
+dotted
+dashed
+solid
+double
+groove
+ridge
+inset
+outset
+none
+hidden
+
+/* can set differnt style as below */
+border-top-style
+border-right-style
+border-bottom-style
+border-left-style
+
+/* Example: */
+p {
+    border-style: solid dotted solid dotted;
+}
+
+The border width
+thin
+medium
+thick
+
+/* Example: */
+p {
+    border-width: 2px;
+}
+
+/* set the width of each edge (Top-Right-Bottom-Left) separately by using 4 values */
+
+/* Example: */
+p {
+    border-width: 2px 1px 2px 1px;
+}
+
+The border color
+
+/* Example: */
+p {
+    border-color: yellow;
+}
+
+/* set the color of each edge (Top-Right-Bottom-Left) separately by using 4 values: */
+
+/* Example: */
+p { 
+    border-color: black red yellow blue;
+}
+
+The border shorthand property
+
+/* Example: */
+
+p {
+    border: 2px black solid;
+}
+
+can use the edge-specific properties border-top , border-right , border-bottom , border-left
+
+/* Example: */
+p {
+    border-left: 2px black solid; border-right: 3px red dashed;
+}    
+
+The border radius = can also use the edge-specific properties border-top-left-radius , border-top-right-radius , border-bottom-left-radius , border-bottom-right-
+radius
+
+/* Example: */
+p {
+    border-radius: 3px;
+}
+
+Using images as borders
+border-image-source
+border-image-slice
+border-image-width
+border-image-outset
+border-image-repeat
+
+Padding
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+/* Example: */
+padding-left: 30px;
+padding-right: 3em;
+
+Using the padding shorthand
+
+Using a single value applies that to all the paddings: top, right, bottom, left.
+/* Example: */
+padding: 20px;
+
+Using 2 values applies the first to bottom & top, and the second to left & right.
+/* Example: */
+padding: 20px 10px;
+
+Using 3 values applies the first to top, the second to left & right, the third to bottom.
+/* Example: */
+padding: 20px 10px 30px;
+
+Using 4 values applies the first to top, the second to right, the third to bottom, the fourth to left
+/* Example: */
+padding: 20px 10px 5px 0px;
+
+Margin
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+/* Example: */
+margin-left: 30px;
+margin-right: 3em;
+
+Using the margin shorthand
+
+Using a single value applies that to all the margins: top, right, bottom, left.
+/* Example: */
+margin: 20px;
+
+Using 2 values applies the first to bottom & top, and the second to left & right.
+/* Example: */
+margin: 20px 10px;
+
+Using 3 values applies the first to top, the second to left & right, the third to bottom.
+/* Example: */
+margin: 20px 10px 30px;
+
+Using 4 values applies the first to top, the second to right, the third to bottom, the fourth to left
+/* Example: */
+margin: 20px 10px 5px 0px;
+
+Using auto to center elements
+/* Example: */
+margin: 0 auto;
+
+Box Sizing
+border-box
+content-box
+
+/* Example: */
+.my-div {
+    box-sizing: border-box;
+}
+
+recommended to apply it to every element on the page, out of the box, with this:
+/* Example: */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+Display
+
+block
+normally elements are displayed inline, with the exception of some elements, including = all of this which are set as block by the browser.
+div
+p
+section
+ul
+
+inline
+Inline is the default display value for every element in CSS.
+inline-block
+similar to inline , but with and height are applied as you specified
+inline-table
+inline-flex
+inline-grid
+inline-list-item
+
+none
+Using display: none makes an element disappear. It's still there in the HTML, but just not visible in the browser.
+
+contents
+flow
+flow-root
+table (and all the ones)
+flex
+grid
+list-item
+
+
+
+Positioning
+static
+This is the default value for an element. Static positioned elements are displayed in the normal page flow.
+
+relative
+top right bottom left
+
+/* Example: */
+/* in HTML */
+<div class="parent">
+  <div class="child">
+    <div class="box">
+      <p>Test</p>
+    </div>
+  </div>
+</div>
+
+/* in CSS */
+/* Example: */
+.parent {
+    background-color: #af47ff;
+    padding: 30px;
+    width: 300px;
+}
+  .child {
+    background-color: #ff4797;
+    padding: 30px;
+}
+  .box {
+    background-color: #f3ff47;
+    padding: 30px;
+    border: 2px solid #333;
+    border-style: dotted;
+    font-family: courier;
+    text-align: center;
+    font-size: 2rem;
+}
+
+absolute
+/* Example: */
+.box {
+    /* ... */
+    position: absolute;
+}
+
+fixed
+/* Example: */
+.box {
+    /* ... */
+    position: fixed;
+}
+
+sticky
