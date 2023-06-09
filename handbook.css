@@ -631,4 +631,317 @@ fixed
     position: fixed;
 }
 
-sticky
+Floating
+left
+right
+none
+
+/* Example: */
+img {
+    float: left;
+    padding: 20px 20px 0px 0px;
+  }
+
+Clearing
+left
+right
+both
+none
+
+/* Example: */
+img {
+    float: left;
+    clear: left;
+    padding: 20px 20px 0px 0px;
+  }
+
+z-index
+
+/* Example: */
+
+.my-first-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    z-index: 10;
+  }
+  .my-second-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    z-index: 20;
+  }
+
+CSS Grid
+/* The CSS Grid layout is activated on a container element (which can be a div or any other tag) by setting display: grid
+The most basic container properties are grid-template-columns and grid-
+template-rows . */
+
+/* Example: */
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+  }
+
+/* = have 4 columns-200 px and 2 rows-300 px */
+
+Grid: Automatic dimensions
+
+/* Example: */
+.container {
+    display: grid;
+    grid-template-rows: 100px auto 100px;
+  }
+
+  Grid: Different columns and rows dimensions
+
+/* Example: */
+  .container {
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 50px;
+  }
+
+Grid: Adding space between the cells
+grid-column-gap
+grid-row-gap
+
+/* Example: */
+.container {
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 50px;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+  }
+
+shorthand Syntax
+
+/* Example: */
+  .container {
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 50px;
+    grid-gap: 25px;
+  }
+Grid: pawning items on multiple columns and/or rowspawning items on multiple columns and/or rows
+properties:
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+
+/* Example: */
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+  } .item1 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .item6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+Shorthand Syntax
+grid-column
+grid-row
+
+/* Example: */
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+  } .item1 {
+    grid-column: 2 / 4;
+  }
+  .item6 {
+    grid-column: 3 / 5;
+  }
+
+Grid: Using fractions
+
+The following example divides a grid into 3 columns with the same width, 1/3 of the available space each.
+
+/* Example: */
+.container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+Grid:  Using percentages and rem
+
+You can also use percentages, and mix and match fractions, pixels, rem and percentages:
+
+/* Example: */
+.container {
+    grid-template-columns: 3rem 15% 1fr 2fr;
+  }
+
+Grid:  Using repeat()
+
+repeat() is a special function that takes a number that indicates the number
+of times a row/column will be repeated, and the length of each one.
+If every column has the same width you can specify the layout using this syntax:
+
+/* Example: */
+.container {
+    grid-template-columns: repeat(4, 100px);
+  }
+
+  This creates 4 columns with the same width. Or using fractions:
+
+/* Example: */
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+Grid:  Specify a minimum width for a row
+
+Common use case: Have a sidebar that never collapses more than a certain amount of pixels when you resize the window.
+
+Here's an example where the sidebar takes 1/4 of the screen and never takes less than 200px:
+
+.container {
+    grid-template-columns: minmax(200px, 3fr) 9fr;
+  }
+
+You can also set just a maximum value using the auto keyword:
+
+.container {
+    grid-template-columns: minmax(auto, 50%) 9fr;
+  }
+
+or just a minimum value:
+
+.container {
+    grid-template-columns: minmax(100px, auto) 9fr;
+  }
+
+Grid: Positioning elements using grid- template-areas
+
+/* Example: */
+/* in HTML */
+<div class="container">
+  <main>...</main>
+  <aside>...</aside>
+  <header>...</header>
+  <footer>...</footer>
+</div>
+
+/* Example: */
+/* in CSS */
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+    grid-template-areas:
+      'header header header header'
+      'sidebar main main main'
+      'footer footer footer footer';
+  } 
+  main {
+    grid-area: main;
+  }
+  aside {
+    grid-area: sidebar;
+  } 
+  header {
+    grid-area: header;
+  }
+  footer {
+    grid-area: footer;
+  }
+
+Grid:  Adding empty cells in template areas
+You can set an empty cell using the dot . instead of an area name in grid- template-areas :
+
+/* Example: */
+.container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 300px 300px;
+    grid-template-areas:
+      '. header header .'
+      'sidebar . main main'
+      '. footer footer .';
+  }
+
+Grid:  Fill a page with a grid
+
+/* Example: */
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+Grid: An example: header, sidebar, content and footer
+
+/* Example: */
+/* in HTML */
+<div class="wrapper">
+  <header>Header</header>
+  <article>
+    <h1>Welcome</h1>
+    <p>Hi!</p>
+  </article>
+  <aside>
+    <ul>
+      <li>Sidebar</li>
+    </ul>
+  </aside>
+  <footer>Footer</footer>
+</div>
+
+/* Example: */
+/* in CSS */
+header {
+    grid-area: header;
+    background-color: #fed330;
+    padding: 20px;
+  } 
+article {
+    grid-area: content;
+    background-color: #20bf6b;
+    padding: 20px;
+  } 
+aside {
+    grid-area: sidebar;
+    background-color: #45aaf2;
+  }
+footer {
+    padding: 20px;
+    grid-area: footer;
+    background-color: #fd9644;
+  } 
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      'header  header'
+      'sidebar content'
+      'footer  footer';
+  }
+
+When the layout is smaller we can put the sidebar below the content using a media query:
+
+/* Example: */
+@media (max-width: 500px) {
+    .wrapper {
+      grid-template-columns: 4fr;
+      grid-template-areas:
+        'header'
+        'content'
+        'sidebar'
+        'footer';
+  } }
